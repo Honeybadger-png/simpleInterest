@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title> Simple Interest Calculator</title>
+    </head>
+    <body>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+            Amount <input class="amount"type="number"  id="principal">
+            <br>
+            <br>
+            No. of Years 
+            <select id="years">
+                <script language="javascript" type="text/javascript">  
+                    for(var d=1;d<=99;d++){
+                        var year=new Date().getFullYear()+parseInt(d);
+                        document.write("<option value=",d,">"+d+"("+year+")"+"</option>");
+                    }
+                </script>
+            </select>
+            <br>
+            <br>
+            Interest rate:<input onchange="updateRate();"  type="range" min="1" max="20" value="10.25" step="0.25" class="slider" id="rate"><span id="rate_val">10.25%</span>
+            <br>
+            <br>    
+            <button onclick="compute();">Compute Interest</button>
+            <span id="result">
+            </span>
+        </div>
+
+    </body>
+    <footer>
+        &#169; This calculator belongs to Mert Gül
+    </footer>
+</html>
